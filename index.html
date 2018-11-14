@@ -1,44 +1,327 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lan="en">
 <head>
-  <meta charset="utf-8">
-  <title>Rachelle's Portfolio</title>
-  <link rel="stylesheet" href="assets/stylesheet/main4.css">
-  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Istok+Web" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-store">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <link rel="stylesheet" type ="text/css" href="Assets/Stylesheet/main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lekton|Molengo" rel="stylesheet">
+
+    <script src="../lib/D3v4/d3.js"></script>
+    <script src="../lib/Venn/venn.js"></script>
+    <script src="JavaScript/sect.js"></script>
 </head>
 <body>
-  <div class="flex-container">
-    <div id="nav" class="flex-wrapper">
-      <div class="item">
-          <div class="header">
-            Data Stories
-            <div class="first">
-              <input type="button" class="link" id="text1" value="Data Story 1"/>
-              <input type="button" class="link" id="text2" value="Data Story 2"/>
+    <div class= "container">
+        <div id = 'graphic'>
+            <table>
+                <tr>
+                    <td>
+                        <div><input type="button" id="button2" value="Resume"/></div> 
+                    </td>
+                    <td>
+                        <div> <input type="button" id="button1" value="Portfolio"></div>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                        
+                        
+                    </td>
+                    <td>
+                        <div id = 'vis'>
+                            <div id='svgTitle'></div>
+                            <div id='svgContainer'></div>
+                        </div>
+            
+                    </td>
+                </tr>
+            </table>    
+            <div id = "extra-space">
             </div>
-          </div>
-      </div>
-      <div class="title"><a href="index.html">Rachelle's Portfolio</a></div>
-      <div class="item">
-          <div class="header">
-             Visualisations
-            <div class="second">
-              <input type="button" class="link" id="button1" value="Visualisation 1">
-              <input type="button" class="link" id="button2" value="Visualisation 2">
-              <input type="button" class="link" id="button3" value="Visualisation 3">
-            </div>
-           </div>
-      </div>
+            <div></div>
+        </div>
     </div>
-    <div id="content">
+    <div hidden>
+        <div data-keyword="V1">
+            Sephardi is one of the predominant Jewish sub-ethnicities. Sephardic Jews are
+            originally from regions that form modern day Spain and Portugal, but were expelled
+            during the Spanish Inquisition, often to areas with no other Jewish communities
+            such as West Asia and North Africa. Today, Sephardic Jews also refers to Jewish
+            communities from these parts of the world. Sephardic Jews have their own
+            rabbinical council which has resulted in slightly different laws and variations of
+            Jewish traditions. Sephardic Jews established some of the first Jewish communities
+            in the United States, dating back to pre-colonial times. There was no mass
+            immigration of Sephardic Jews, like those from Eastern Europe. Rather they trickled
+            in. Today, the United States has the third largest Sephardic Jewish community in the
+            world. <a href="http://www.jewfaq.org/ashkseph.htm" target="_blank">Learn More</a>
+        </div>
+        <div data-keyword="V2">
+            Ashkenazi Jews form the second main Jewish sub-ethnicity alongside Sephardic
+            Jews. Originally, they settled in parts of Germany and France, but since moved
+            eastward and today, refers to Jews from the majority of Europe. Despite suffering
+            from consistent anti-Semitism and oppression, Ashkenazi Jews played a significant
+            role in the development of European culture and science. Ashkenazi Jews created
+            the Yiddish language, a mix of German and Hebrew, from which many words have
+            become commonplace, not just amongst Jews, but in colloquial English (i.e.
+            schmuck). Huge influxes of Ashkenazi Jews came to America at various points, the
+            most influential of which were the immigrants at the beginning of the 20th century.
+            <a href="http://www.jewfaq.org/ashkseph.htm" target="_blank">Learn More</a>
+        </div>
+        <div data-keyword="V3">
+            Judaism is split into four main religious movements – Orthodox, Conservative,
+            Reconstructionist and Reform (the survey used as a basis for this project grouped
+            the reconstructionist and reform movements together). The movements differ
+            primarily on levels of observance and the interpretations of religious scripture and
+            Jewish laws. Each denomination is further divided into different sects. Within the
+            orthodox movement, there are many different sects all with very specific
+            interpretations and complexities associated with each particular one. For instance,
+            observant Jews, specifically orthodox, employ a dress code, keep kosher and
+            observe Shabbat – but these might take different forms depending on the sect.
+            <a href=" http://www.jewfaq.org/movement.htm" target="_blank">Learn More</a>
+        </div>
+        <div data-keyword="V4">
+            A synagogue is the Jewish house of assembly used for prayer, study of the Torah and
+            for community gatherings. A synagogue is not imperative for prayer. Jewish law
+            dictates that a minyan, ten men, need to be present, anywhere, in order to conduct
+            group prayers. Though most praying can be done individually, a minyan is required
+            to read the Torah and for certain holidays. The minimal traditional expectations of a
+            synagogue include: a bimah (a platform from which the Torah is read and a rabbi
+            conducts prayer) and an arc containing the Torah. Traditionally, both the bimah and
+            the arc are situated so that the congregation faces east, towards Israel, during
+            prayer. Whether Jerusalem is actually east is a point of argument. 
+            <a href="http://www.jewfaq.org/shul.htm" target="_blank">Learn More</a></div>
+        <div data-keyword="V5">
+            The Hebrew phrase ‘Yom Tov’ can refer to all Jewish holidays but is usually used to
+            refer specifically to the holidays, or periods of time, during which all the activities
+            prohibited on Shabbat are prohibited as well. 
+            <a href="http://www.jewfaq.org/holiday0.htm" target="_blank">Learn More</a></div>
+        <div data-keyword="V6">
+            Keeping kosher refers to following the Jewish dietary requirements as outlined by
+            the Torah and accompanying rabbinical law. Kashrut only allows certain animals to
+            be consumed (the most well-known items include pork and shellfish) and killed in a
+            specific way. It is also forbidden to mix dairy with meat. Fish, eggs and all other food
+            items are considered ‘pareve’, meaning neither dairy or meat. Kosher kitchens have
+            separate dishes and cooking utensils for dairy and meat. If possible, separate sinks
+            and counters are used or even two kitchens. In more modern times, the definition of
+            kosher has extended to rabbi supervision for the preparation of processed or
+            packaged foods, and regular inspections of any kosher establishments. The degree
+            of strictness varies between sub-ethnicities, denominations and individual
+            denominational sects. <a href="http://www.jewfaq.org/kashrut.htm" target="_blank">Learn More</a></div>
+        <div data-keyword="V7">
+            Hasidic Jews arose as a religious group in Ukraine during the 18th century. Hassidism
+            originated from a rabbi called the Bal Shem Tov and focuses on religion, observance
+            and mysticism. Hassidic Jews have since branched out into multiple sects that
+            disagree on the recognised customs. 
+            <a href="https://www.myjewishlearning.com/article/hasidic-movement-a-history/" target="_blank">Learn More</a>
+        </div>
+        <div data-keyword="V8">
+            The majority of the early 20th century Jewish immigrants were Ashkenazi Jews from
+            Eastern Europe. Ashkenazi Jewish rabbinical law, languages and traditions laid the
+            foundation for modern-day Jewish American culture. 
+            <a href="https://www.myjewishlearning.com/article/american-jews-at-the-turn-of-the-century/" target="_blank">
+            Learn More</a></div>
+        <div data-keyword="V9">
+            The Jewish Deli is mostly associated with Jews of New York City. Immigrants who
+            came to the United States from Europe opened up kosher delis that served Jewish
+            variations of German and Eastern European food. Due to further popularisation by
+            future generations of American-born Jews, Jewish deli food holds a firm presence in
+            Jewish American culture. 
+            <a href="https://www.economist.com/books-and-arts/2015/12/10/the-rise-and-fall-of-the-jewish-deli" target="_blank">
+            Learn More</a></div>
+        <div data-keyword="V10">
+            The Torah outlines three fathers and four mothers of Judaism. Abraham, the first
+            Jew and his wife Sarah. The second father of Judaism is their son Isaac (Yitzchak) and
+            his wife Rebekah (Rivkah). Yitzchak and Rivkah had twins, one of these twins, Jacob
+            (Yaakov), is the third father of Judaism along with this wives Rachel and Leah. 
+            <a href="http://www.jewfaq.org/origins.htm" target="_blank">Learn More</a></div>
+        <div data-keyword="V11">
+            Halakhic Law refers to both God-mandated law as well as rabbinical law. As with
+            most religious scripture, there are various interpretations of the material. While
+            some is universal across Judaism, the technicalities of others were (and continue to
+            be) argued amongst Jewish leaders. Some is between sects and others between
+            ethnic group of Jews. For instance, Ashkenazi and Sephardic Jews differ on which
+            non-grains (i.e. rice, beans, non-grain seeds) are allowed during Passover. More
+            sect-specific examples include whether women can wear trousers or whether using
+            electricity counts as working on Shabbat. Disagreement on technicalities laid
+            foundations for different branches of Judaism. Rabbinic law remains the main
+            difference between sects of Judaism. 
+            <a href="http://www.jewfaq.org/halakhah.htm" target="_blank">Learn More</a></div>
+        <div data-keyword="V12">
+            One of the more common pop culture stereotypes of Jewish culture is the caricature
+            of overbearing mothers. Whilst this trope is quite consistent throughout cultures,
+            specifically amongst immigrant mothers (source), Jewish mothers remain unique in
+            that this mentality seems to have preserved over generations (source). Many Jewish
+            anecdotes centre on the stereotype of overbearing Jewish mothers (and their
+            persisting proffering of chicken soup). 
+            <a href="https://www.myjewishlearning.com/article/battling-stereotypes-of-the-jewish-mother/" 
+            target="_blank">Learn More</a></div>
+        <div data-keyword="V13">
+            One of the more integral Jewish traits is an inquisitive mind and learning through
+            discourse. It is embedded in the practice of studying Torah and is perpetuated
+            through Jewish culture. </div>
+        <div data-keyword="V14">
+            The Torah refers to the first five books of the Old Testament and is read at religious
+            services throughout the year. It is not the only religious scripture in Judaism. 
+            <a href="http://www.jewfaq.org/torah.htm" target="_blank">Learn More</a></div>
+        <div data-keyword="V15">
+            The success of the Jewish American pursuit of the American Dream and the resulting
+            wealth bred new stereotypes that often appear in pop culture representation of
+            Jewish Americans. This includes Jewish Americans as lawyers, doctors and
+            Hollywood success stories. With these came the Jewish American Princess trope of
+            spoiled girls wholly dependent on their fathers. These emphasise the lifestyle many
+            Jewish families have. <a href="https://jwa.org/encyclopedia/article/stereotypes-in-united-states" target="_blank">
+            Learn More</a></div>
+        <div data-keyword="V16">
+            The Jewish diaspora refers to the exile of the Jewish people from the ancestral
+            homeland (Israel) and the subsequent dissipation across the globe. The diaspora is
+            often furthered by the oppressive countries in which many Jewish communities
+            resided. The Jewish diaspora is well documented in both religious scripture as well
+            as global history. <a href="https://www.britannica.com/topic/Diaspora-Judaism" target:"_blank">
+            Learn More</a></div>
+        <div data-keyword="V17">
+            Subsects of Jewish culture were created as a result of Jewish tradition mixing with
+            the culture of the country in which those Jews resided. Some examples of such
+            subsects of Jewish culture include: Bukharan (Central and West Asia), Eastern
+            European (with a subsect specific to those from the Soviet Union), Persian and,
+            recently, Israeli Jews. <a href="https://www.myjewishlearning.com/article/types-of-jews/" target:"blank">
+            Learn More</a></div>
+        <div data-keyword="V18">
+            A rabbi is someone knowledgeable in religious practices and laws. In more reform
+            synagogues, women can be rabbis, however more often, rabbis are men. Rabbinical
+            qualifications are considered equal to a bachelor�s degree and are earned by
+            attending Yeshiva as well as rabbinical school. Though not always, many rabbis tend
+            to specialise in certain areas of Judaism. Rabbis are hired by Jewish communities,
+            though certified rabbis are not required to work as religious leaders. Unlike
+            members of clergy in other religions, rabbis are not just community leaders; they
+            are also teachers, judges and a source of advice and comfort.
+            <a href="http://www.jewfaq.org/rabbi.htm" target="_blank">Learn More</a></div>
+        <div data-keyword="V19">
+            Passover is a holiday that celebrates the Jewish people�s escape from slavery in
+            Egypt. It tells the story of how Moses became a leader, freed the Jews and helped
+            them evade re-capture by the Egyptians. The holiday lasts seven days in Israel and
+            eight days everywhere else (in the past, there was difficulty determining Israeli time
+            from other parts of the world). No leavened bread is consumed during Passover;
+            instead, Jews eat Matzah, an unleavened bread. This commemorates the part of the
+            story when Jews were forced to run carrying unleavened dough on their shoulders
+            which baked in the sun. Today, matzah is commercially produced into a cracker-like
+            bread and consumed in lieu of any bread or grain.
+            <a href="http://www.jewfaq.org/holidaya.htm" target="_blank">Learn More</a></div>
+        <div data-keyword="V20">
+            In Hebrew, Seder means order which is the best way to describe this Passover
+            tradition. A Seder is held the first two of the eight nights (or, in Israel, the first of the
+            seven nights) of Passover and consists of telling the story through passages of text,
+            song, food and activities.
+            <a href="http://www.jewfaq.org/holidaya.htm#Seder" target="_blank">Learn More</a></div>
+        <div data-keyword="V21">
+            In the Torah, God first promises Israel to the Jewish people through Abraham.
+            Throughout the Torah, this promise is referenced, and many stories feature patterns
+            of the Jews trying to return to the promised land and then retreating into exile
+            again. This reflects world history as Jews often attempted to return to the
+            Palestinian area but were unsuccessful until 1948.
+            <a href=" http://www.jewfaq.org/israel.htm" target="_blank">Learn More</a></div>
+        <div data-keyword="V22">
+            Mashiach (Messiah) is a core principle in Judaism. It is believed that once he arrives,
+            all Jews will live in Israel and there will be world peace. Jews do not believe that
+            Mashiach has arrived yet. learn more.
+            <a href="http://www.jewfaq.org/mashiach.htm " target="_blank">Learn More</a></div>
+        <div data-keyword="V23">
+            Yom Ha'atzmaut, or Israeli Independence Day, is celebrated every year on the 9th of
+            May and signifies the day Israel became a country in 1948. Yom Ha'atzmaut is
+            different from most other Jewish holidays because it is not a religiously-mandated
+            holiday or based on any religious scripture. It signifies the importance Israel plays in
+            Jewish culture and how interwoven the religion, culture and ancestry are within
+            Judaism.<a href="https://www.myjewishlearning.com/article/yom-haatzmaut-israel-independence-day/" target="_blank">
+            Learn More</a></div>
+        <div data-keyword="V24">
+            Taglit-Birthright is an organisation that was developed in the late 90s. It is funded by
+            Jews from around the world and its aim is to provide Jews between the age of 13-26
+            the opportunity to visit Israel for free. The organisation provides different
+            programmes that include options for all denominations as well as activity-specific
+            programmes (i.e. religious history, food, culture or outdoors). The programme has
+            been criticised recently for excluding a trip to the Gaza strip as well as information
+            regarding relations between Israel and Palestine from its itinerary (source).
+            <a href="https://www.myjewishlearning.com/article/birthright-israel/" target="_blank">Learn More</a></div>
+        <div data-keyword="V25">
+            Tikkun Olam is a Jewish concept that encompasses the personal and social
+            responsibility of a Jew to behave morally and uphold Jewish values. A subsect of this
+            concept is performing mitzvot – 613 good deeds listed in the Torah. Though some
+            outline religious obligations, the majority formulate a behavioural value system.
+            <a href="https://www.myjewishlearning.com/article/tikkun-olam-repairing-the-world/" target="_blank">Learn More</a></div>
+        <div data-keyword="V26">
+            Jewish duties include following halakhic law, observing religious and cultural
+            traditions and performing mitzvot. It is expected of every Jew once they become an
+            adult (bar/bat mitzvah). The specifics vary by denomination and level of observance.
+            <a href="https://www.myjewishlearning.com/article/the-jewish-age-of-majority-and-its-obligations/" target="_blank">
+            Learn More</a></div>
+        <div data-keyword="V27">
+            Exodus is the second book in the Torah. It outlines the Moses-led escape of the
+            Jewish People from slavery in Egypt and their 40-year journey through the desert to
+            Israel. Included in Exodus is the receival of the Ten Commandments as well as the
+            oral version of the Torah and is considered the day the Hebrews officially became
+            the Jewish nation. This story is celebrated during the Jewish holiday of Passover.
+            <a href="https://www.myjewishlearning.com/article/the-book-of-exodus/" target="_blank">Learn More</a></div>
+        <div data-keyword="V28">
+            The Haggadah is the guidebook for the Passover Seder. It provides instructions for
+            the order, the story of Passover, the meaning behind each item, as well as songs and
+            anecdotes. To understand the vast spectrum of religious and secular interpretations
+            of Seders, see this reform version of the Haggadah and this more religious version.
+            <a href="https://www.myjewishlearning.com/article/the-haggadah/" target="_blank">Learn More</a></div>
+        <div data-keyword="V29">
+            Shabbat represents God’s day of rest in the Torah’s creation story. Since the Jewish
+            calendar week begins on Sunday, the Jewish Shabbat is Saturday every week (unlike
+            the Christian Sabbath which falls on Sunday). Shabbat begins on Friday night and
+            incorporates several traditions that vary depending on the level of observance. At a
+            primitive level, two candles are lit on Friday night to welcome the holiday, songs are
+            sung and blessings are made over the wine and challah (traditional Shabbat bread).
+            The next day, synagogue is often attended. More religious Jews do not work on
+            Sabbath. ‘Work’ in the context of Jewish holidays includes no use of electricity or
+            cars.<a href="http://www.jewfaq.org/shabbat.htm" target="_blank">Learn More</a></div>
+        <div data-keyword="V30">
+            In Judaism, a day begins at sunset the day before. Therefore, all Jewish holidays
+            begin the evening before its official day.<a href="http://www.jewfaq.org/holiday0.htm" target="_blank">Learn More</a></div>
+        <div data-keyword="V31">
+            Yom Kippur is the day of Atonement and one of the four high holidays.
+            Traditionally, a Jew will attend synagogue all day and fast for 25 hours so as
+            to focus on atoning for their sins. Additionally, a shofar (a religious horn) is
+            sounded during the day. Though all are viewed as essential parts of the
+            holiday’s traditions, listening to the shofar is the only aspect that is
+            considered a divine mitzvah and a requirement.
+            <a href="http://www.jewfaq.org/holiday4.htm" target="_blank">Learn More</a></div>
+        <div data-keyword="V32">
+            <p>Other than the synagogue, there is a variety of popular Jewish American
+                organisations. Sunday school is commonly run by synagogues – similar to
+                Christian Sunday schools. it provides Jewish children with education on the
+                Torah and Jewish holidays. Frequently, Jewish Sunday schools will also teach
+                some Hebrew. Youth organisations provide events centred
+                around both Jewish holidays and non-specific events, to bring Jewish Youth
+                together through Judaism. The level of observance varies between
+                organisations. Jewish summer camps are often run by the same organisations. Though they
+                vary between day camps and sleepaway camps — many have developed a
+                stereotype of their own as being particularly lavish. Birthright is an organisation 
+                that is sponsored by Jews around the world to
+                provide any Jews between 13-26 years old the opportunity for a free trip to
+                Israel. The purpose is to reconnect estranged Jews to their homeland as well
+                as to each other. The Jewish Community Center (JCC) is common in many Jewish communities
+                across America and serves a similar function to a YMCA.</p>
+            <a href="https://www.jewishedproject.org/sites/default/files/2017-01/Teen%20Development%20and%20Jewish%20Life%20-%20Insights%20from%20Research%20and%20Practice.pdf" 
+            target="_blank">Learn More</a>
+        </div>
+        <div data-keyword="V33">
+            Full-time Jewish schools provide Jewish Studies as part of the mandatory
+            curriculum. Stricter Jews will send their children to schools that are
+            exclusively in Jewish and Hebrew studies. Yeshiva refers to such schools for
+            boys (and is usually a feeder school to rabbinic studies). Seminary is the
+            female equivalent. Level of observance varies between different yeshivas
+            and seminaries.</div>
+        <div data-keyword="V34">
+            A term that refers to a combination of Christmas and Chanukah. The term
+            gained mainstream popularity through Seth Cohen, a main character on the
+            TV show The O.C.. The term is generally used by children raised in an
+            interfaith household.</div>
     </div>
-    <iframe id="htmlcontent" src="" frameborder="0" scrolling="no" seamless></iframe>
-  </div>
-<script src="data.js"></script>
 </body>
-</html>
