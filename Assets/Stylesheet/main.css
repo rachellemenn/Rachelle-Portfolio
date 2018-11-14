@@ -1,0 +1,371 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  
+  /* HTML5 display-role reset for older browsers */
+  
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  
+  body {
+    line-height: 1;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  blockquote, q {
+    quotes: none;
+  }
+  
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  /*Above is the CSS reset taken from an online source*/
+
+
+  /* general formatting */
+  body {
+    background-color: #ECE8E8;
+  }
+  
+  .container {
+      width: 800px;
+}
+
+
+  #graphic {
+      padding-top: 60px;
+  }
+
+  #sections {
+      position: relative;
+      display: inline-block;
+      width: 800px;
+      top: 0px;
+      z-index: 90;
+      padding-bottom: 200px;
+      margin-right: 40px;
+      margin-left: 150px;
+  }
+
+  .step {
+      margin-bottom: 200px;
+      font-family:"Lekton", sans-serif;
+      font-size: 25px;
+      /* font-weight: bold; */
+      line-height: 1.3em;
+      color: #363D4F;
+  }
+
+  p {
+    margin-top: 20px;
+  }
+
+  #sections .title{
+      font-family: "Molengo", sans-serif;
+      font-size: 30px;
+      margin-bottom: 10px;
+      line-height: 1.2em;
+      color:  #363D4F;
+  }
+
+  #extra-space {
+      height: 300px;
+  }
+
+  /* sets up vis div */
+  #vis {
+      display: inline-block;
+      position: fixed;
+      top: 60px;
+      z-index: 1;
+      margin-left: 150px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      height: 650px;
+      width: 650px;
+      right:0;
+      /* border-style: dashed;
+      border-width: 4px;
+      border-color: black; */
+  }
+
+  .VizTitle {
+    font-family: "Molengo", sans-serif;
+    color: #363D4F;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    text-anchor: middle;
+    text-align: center;
+
+  }
+ 
+  /* quotes in SVG container and quotation mark in sect div */
+  #sections blockquote {
+    padding-top: 150px;
+    display: inline-block;
+    position: static;
+    top: 60px;
+    /* z-index: 1; */
+    margin-left: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  blockquote:after {
+    display: inline-block;
+    font-family: "Lekton", sans-serif;
+    background: #363D4F;
+    width: 130px;
+    height:130px;
+    border-radius: 50%;
+    content: '\275D';
+    position: static;
+    font-size: 100px;
+    line-height: 130px;
+    text-align: center;
+    top: 20px;
+    left: 50%;
+    margin-left: -400px;
+    color:rgba(15,87,226);
+    text-shadow: 0 1px 1px rgba(255,255,255,0.1);
+  }
+
+  blockquote:before{
+    display: inline-block;
+    position: fixed;
+    content: '';
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border-left: 5px solid rgba(15,87,226);
+    position: static;
+    top: 20px;
+    left: 30px;
+    z-index: -1;
+  }
+
+  .quote{
+    font-family: "Lekton", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    display: inline-block;
+    color: #363D4F;
+    text-shadow: 0 1px 1px #363D4F;
+    line-height: 1.3;
+    box-shadow: 0 -6px 0 rgba(15,87,226);
+    align-content: center;
+    text-anchor: middle;
+    margin-top: 30px;
+    margin-right: 50px;
+  }
+
+  /* home screen */
+
+  /* title */
+  .stationed {
+    font-family: "Molengo", sans-serif;
+    font-size: 40px;
+    margin-top: 100px;
+  } 
+  .moving1 {
+    font-family: "Molengo", sans-serif;
+    color: rgba(15,87,226,0.8);
+    float: right;
+    font-size: 40px;
+    opacity: 0;
+    animation: fadeIn 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    margin-top: 50px;
+  } 
+  .moving2 {
+    font-family: "Molengo", sans-serif;
+    color: rgba(15,87,226,0.8);
+    float: right;
+    font-size: 40px;
+    opacity: 0;
+    animation: fadeIn 3s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+    margin-top: 50px;
+  } 
+
+
+  /* instructions on the right home screen */
+  .subtitle {
+    font-size: 30px;
+    font-family:"Molengo", sans-serif;
+    line-height: 30px;
+    color: #363D4F;
+    margin-top: 100px;
+    margin-right: 20px;
+    animation: fadeIn 3s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes fadeIn {
+  from {Opacity: 0; }
+  to {Opacity: 1;}
+} 
+
+  /* arrow formatting */
+  #button1 {
+    background:#ECE8E8;
+    color:#000086;
+    border:none;
+    position:relative;
+    height:60px;
+    font-size:4em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+  }
+
+  button1:hover{
+    background:#ECE8E8;
+    color:#000086;
+  }
+
+  button1:before,button1:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #ECE8E8;
+    transition:400ms ease all;
+  }
+
+  button1:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+
+  button1:hover:before,button1:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+
+  #button2 {
+  background:#ECE8E8;
+  color:#000086;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:4em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  }
+
+  button2:hover{
+    background:#ECE8E8;
+    color:#000086;
+  }
+
+  button2:before,button2:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #ECE8E8;
+    transition:400ms ease all;
+  }
+
+  button2:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+
+  button2:hover:before,button2:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+
+    /* Tooltip container */
+  .keyword {
+    position: relative;
+    display: inline-block;
+    background-color: rgba(15,87,226,0.2);
+  }
+
+  /* Tooltip text */
+  .keyword .tooltip {
+    visibility: hidden;
+    width:300%;
+    background-color: /*#555*/rgba(15,87,226,0.8);
+    color: #ECE8E8;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-size: 0.75em;
+    text-anchor: middle;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 30%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  /* Tooltip arrow */
+  .keyword .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .keyword:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  } 
+
+  .keyword .tooltip a{
+    color: #ECE8E8;
+    text-decoration: 1px dotted;
+  }
